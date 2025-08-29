@@ -1,0 +1,504 @@
+Here’s an **all-in-one HTML file** of your portfolio with a **simple 3D animation effect** added using **CSS and JavaScript**, while keeping it light and browser-friendly. The 3D animation is added to the **profile name (k.dinakaran)** with a subtle **rotation on hover**, and animated **project cards** that flip when hovered.
+
+---
+
+### ✅ Updated One-File Portfolio with 3D Animation
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>dinakaran</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      perspective: 1000px;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    header:hover {
+      transform: rotateY(10deg);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      transition: transform 0.5s;
+    }
+
+    nav {
+      background: #444;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about, .skills, .projects, .contact {
+      margin-bottom: 3rem;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      background: #eee;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: white;
+      perspective: 1000px;
+      height: 200px;
+    }
+
+    .project-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;Here’s an **all-in-one HTML file** of your portfolio with a **simple 3D animation effect** added using **CSS and JavaScript**, while keeping it light and browser-friendly. The 3D animation is added to the **profile name (k.dinakaran)** with a subtle **rotation on hover**, and animated **project cards** that flip when hovered.
+
+---
+
+### ✅ Updated One-File Portfolio with 3D Animation
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>dinakaran</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      perspective: 1000px;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    header:hover {
+      transform: rotateY(10deg);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      transition: transform 0.5s;
+    }
+
+    nav {
+      background: #444;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about, .skills, .projects, .contact {
+      margin-bottom: 3rem;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      background: #eee;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: white;
+      perspective: 1000px;
+      height: 200px;
+    }
+
+    .project-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .project:hover .project-inner {
+      transform: rotateY(180deg);
+    }
+
+    .project-front,
+    .project-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .project-front {
+      background-color: #fff;
+    }
+
+    .project-back {
+      background-color: #eaeaea;
+      transform: rotateY(180deg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    a {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>k.dinakaran</h1>
+    <p>Web Developer | Designer | Programmer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate web developer with experience in building modern, responsive websites and web apps. I love solving problems and learning new technologies.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Git</li>
+      <li>Figma</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    
+    <div class="project">
+      <div class="project-inner">
+        <div class="project-front">
+          <h3>Portfolio Website</h3>
+          <p>Hover to view details</p>
+        </div>
+        <div class="project-back">
+          <p>A clean and responsive portfolio website built using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-inner">
+        <div class="project-front">
+          <h3>To-Do App</h3>
+          <p>Hover to view details</p>
+        </div>
+        <div class="project-back">
+          <p>A simple to-do list app with local storage and dynamic UI using JavaScript.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Phone: 9342608131</p>
+    <button onclick="showAlert()">Say Hello</button>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> dinakaran. All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Alert function
+    function showAlert() {
+      alert('Thanks for reaching out! I will get back to you soon.');
+    }
+  </script>
+
+</body>
+</html>
+```
+
+---
+
+### 🌀 What’s Added:
+
+* **3D rotation on the header** when hovered.
+* **Flipping animation for each project card** (front/back sides) using CSS 3D transforms.
+* Still all in **one file**, no external libraries.
+
+---
+
+Would you like to add:
+
+* A 3D rotating cube or animated background?
+* Dark/light mode toggle?
+* Downloadable resume button?
+
+Let me know and I’ll help you build it.
+
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .project:hover .project-inner {
+      transform: rotateY(180deg);
+    }
+
+    .project-front,
+    .project-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .project-front {
+      background-color: #fff;
+    }
+
+    .project-back {
+      background-color: #eaeaea;
+      transform: rotateY(180deg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    a {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>k.dinakaran</h1>
+    <p>Web Developer | Designer | Programmer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate web developer with experience in building modern, responsive websites and web apps. I love solving problems and learning new technologies.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Git</li>
+      <li>Figma</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    
+    <div class="project">
+      <div class="project-inner">
+        <div class="project-front">
+          <h3>Portfolio Website</h3>
+          <p>Hover to view details</p>
+        </div>
+        <div class="project-back">
+          <p>A clean and responsive portfolio website built using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-inner">
+        <div class="project-front">
+          <h3>To-Do App</h3>
+          <p>Hover to view details</p>
+        </div>
+        <div class="project-back">
+          <p>A simple to-do list app with local storage and dynamic UI using JavaScript.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Phone: 9342608131</p>
+    <button onclick="showAlert()">Say Hello</button>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> dinakaran. All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Alert function
+    function showAlert() {
+      alert('Thanks for reaching out! I will get back to you soon.');
+    }
+  </script>
+
+</body>
+</html>
+```
+
+---
+
+### 🌀 What’s Added:
+
+* **3D rotation on the header** when hovered.
+* **Flipping animation for each project card** (front/back sides) using CSS 3D transforms.
+* Still all in **one file**, no external libraries.
+
+---
+
+Would you like to add:
+
+* A 3D rotating cube or animated background?
+* Dark/light mode toggle?
+* Downloadable resume button?
+
+Let me know and I’ll help you build it.
